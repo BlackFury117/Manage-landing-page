@@ -1,23 +1,36 @@
 // SLIDING EFFECT //
-const cardSlider = document.querySelector('.card-slider');
-const cardWidth = document.querySelector('.card').offsetWidth + 5; // Consider card width and margin
-const numCards = document.querySelectorAll('.card').length;
 
-const totalWidth = cardWidth * numCards;
-const sliderWidth = totalWidth * 2; // Duplicated cards
+document.addEventListener('DOMContentLoaded', () => {
+  const cardSlider = document.querySelector('.card-slider');
+  const cards = document.querySelectorAll('.card');
+  const cardWidth = cards[0].offsetWidth + 5;
+  const numCards = cards.length;
 
-cardSlider.style.width = `${sliderWidth}px`;
+  const totalWidth = cardWidth * numCards;
+  const sliderWidth = totalWidth * 2;
 
-let currentPosition = 0;
+  cardSlider.style.width = `${sliderWidth}px`;
 
-function slideCards() {
-  currentPosition -= 1;
-  cardSlider.style.transform = `translateX(${currentPosition}px)`;
+  let currentPosition = 0;
+  let slideInterval = setInterval(slideCards, 15);
 
-  if (currentPosition <= -totalWidth) {
-    currentPosition = 0;
+  function slideCards() {
+    currentPosition -= 1;
+    cardSlider.style.transform = `translateX(${currentPosition}px)`;
+
+    if (currentPosition <= -totalWidth) {
+      currentPosition = 0;
+    }
   }
-}
 
-setInterval(slideCards, 15); // Adjust the timing as needed
+  cardSlider.addEventListener('mouseover', () => {
+    clearInterval(slideInterval); // Clear the interval on mouseover
+  });
+
+  cardSlider.addEventListener('mouseout', () => {
+    clearInterval(slideInterval); // Clear any existing interval
+    slideInterval = setInterval(slideCards, 15);
+  });
+});
+
 // END SLIDING EFFECT //
