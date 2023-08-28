@@ -29,6 +29,7 @@ header{
 
                 &:hover{
                     color: #9a9a9d;
+                    transition: .25s ease-in;
                 }
             }
         }
@@ -218,6 +219,18 @@ main{
             .btn-second-section{
                 @include customize-btn;
             }
+        }
+    }
+
+    /// SECOND SECTION
+    .third-section{
+        background-color: $orange-color;
+        padding: 0 4rem;
+
+        .third-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
