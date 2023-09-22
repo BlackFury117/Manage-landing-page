@@ -13,3 +13,17 @@
         transition: .20s ease-in;
     }
 }
+
+@mixin flex{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin btn-footer{
+    background-color: $orange-color;
+    color: white;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+}

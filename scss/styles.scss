@@ -265,5 +265,81 @@ main{
             /// FOOTER SECTION ///
 
 footer{
+    background-color: $heading-color;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
 
+    .first-footer{
+        display: flex;
+        @include flex;
+
+        .fa-brands{
+            color: #dbdce1;
+            margin-right: .5rem;
+        }
+    }
+
+    .second-footer{
+        display: flex;
+        @include flex;
+
+        .link-footer{
+            margin-bottom: 1rem;
+
+            .links{
+                color: #dbdce1;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .third-footer{
+        @extend .second-footer;
+        justify-content: stretch;
+
+        .link-footer-2{
+            @extend .link-footer;
+
+            .links-2{
+                @extend .links;
+            }
+        }
+    }
+
+    .fourth-footer{
+        display: flex;
+        @include flex;
+
+        .form{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            input{
+                font-size: .8rem;
+                font-weight: 600;
+                padding: .7rem .8rem;
+                margin-right: 1rem;
+                border: none;
+                border-radius: 1.25rem;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+            }
+
+            .btn-footer{
+                @include btn-footer;
+            }
+            
+        }
+
+        div{
+            text-align: right;
+
+            .copyright{
+                font-size: .8rem;
+                font-weight: 600;
+                color: #dbdce1;
+            }
+        }
+    }
 }
