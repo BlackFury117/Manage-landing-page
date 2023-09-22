@@ -277,6 +277,11 @@ footer{
         .fa-brands{
             color: #dbdce1;
             margin-right: .5rem;
+
+            &:hover{
+                cursor: pointer;
+                color: $orange-color;
+            }
         }
     }
 
@@ -290,6 +295,10 @@ footer{
             .links{
                 color: #dbdce1;
                 font-weight: 600;
+
+                &:hover{
+                    color: $orange-color;
+                }
             }
         }
     }
@@ -317,8 +326,9 @@ footer{
             align-items: center;
             
             input{
+                font-family: 'Be Vietnam Pro', sans-serif;
                 font-size: .8rem;
-                font-weight: 600;
+                font-weight: 500;
                 padding: .7rem .8rem;
                 margin-right: 1rem;
                 border: none;
