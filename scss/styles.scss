@@ -324,8 +324,8 @@ footer{
 
         .form{
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            flex-direction: column;
+            align-items: start;
             
             input{
                 font-family: 'Be Vietnam Pro', sans-serif;
@@ -346,6 +346,15 @@ footer{
                     transition: .25s ease-in;
                 }
             }
+
+            #error-message{
+                display: none;
+                margin-top: .600rem;
+                margin-left: 1rem;
+                color: red;
+                font-size: .700rem;
+                font-style: italic;
+            }
             
         }
 
@@ -355,7 +364,7 @@ footer{
             .copyright{
                 font-size: .8rem;
                 font-weight: 600;
-                color: #dbdce1;
+                color: #b4b5b7;
             }
         }
     }
