@@ -300,6 +300,24 @@ main{
     }
 }
 
+@include mobile-view{
+    main{
+        .first-section{
+            padding: 0 2rem;
+
+            .first-container{
+                flex-wrap: wrap;
+            }
+        }
+
+        .third-section{
+            .third-container{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
             /// FOOTER SECTION ///
 
 footer{
@@ -405,5 +423,12 @@ footer{
                 color: #b4b5b7;
             }
         }
+    }
+}
+
+@include mobile-view{
+    footer{
+        flex-wrap: wrap;
+        padding: 3rem 2rem;
     }
 }
