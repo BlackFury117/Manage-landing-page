@@ -93,7 +93,41 @@ header{
 }
 
 @include mobile-view{
-    
+    header{
+        padding: 0 2rem;
+
+        .navbar-container{
+            padding: 4rem 0;
+
+            .logo{
+                .logo-header{
+                    width: 200px;
+                }
+            }
+            .nav-links{
+                display: none;
+            }
+
+            .nav-btn{
+                display: none;
+            }
+        }
+
+        .hero-section{
+            flex-direction: column-reverse;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .text-hero{
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .img-hero{
+                flex-basis: 100%;
+            }
+        }
+    }
 }
 
             /// MAIN SECTION ///
