@@ -370,7 +370,7 @@ main{
 
         .second-section{
             margin-bottom: 3rem;
-            
+
             h2{
                 font-size: 2rem;
                 padding: 0 2rem;
@@ -378,8 +378,18 @@ main{
         }
 
         .third-section{
+            padding: 4rem 2rem;
+
             .third-container{
-                flex-wrap: wrap;
+                flex-direction: column;
+
+                div{
+                    h2{
+                        font-size: 2.5rem;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                }
             }
         }
     }
