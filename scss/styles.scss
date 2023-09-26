@@ -121,7 +121,6 @@ header{
         .hero-section{
             flex-direction: column-reverse;
             justify-content: center;
-            // flex-wrap: wrap;
 
             .text-hero{
                 flex-basis: 100%;
@@ -327,10 +326,43 @@ main{
 @include mobile-view{
     main{
         .first-section{
-            padding: 0 2rem;
+            padding: 0;
 
             .first-container{
-                flex-wrap: wrap;
+                flex-direction: column;
+
+                .first-div{
+                    padding: 0 2rem;
+                    flex-basis: 100%;
+                    text-align: center;
+
+                    h2{
+                        font-size: 2rem;
+                        line-height: 1.3;
+                    }
+                }
+
+                .second-div{
+                    padding-left: 1rem;
+                    flex-basis: 100%;
+
+                    .one{
+                        gap: 0 0;
+
+                        .text{
+                            h3{
+                                font-size: 1.1rem;
+                                background-color: #fff0eb;
+                                padding: .40rem 0 .40rem 0;
+                                margin-top: 0;
+                            }
+
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
 
