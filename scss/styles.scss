@@ -327,6 +327,7 @@ main{
     main{
         .first-section{
             padding: 0;
+            margin-bottom: 3rem;
 
             .first-container{
                 flex-direction: column;
@@ -364,6 +365,15 @@ main{
                         }
                     }
                 }
+            }
+        }
+
+        .second-section{
+            margin-bottom: 3rem;
+            
+            h2{
+                font-size: 2rem;
+                padding: 0 2rem;
             }
         }
 
