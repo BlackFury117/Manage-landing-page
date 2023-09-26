@@ -423,6 +423,12 @@ footer{
         }
     }
 
+    .center{
+        display: flex;
+        justify-content: space-between;
+        gap: 0 150px;
+    }
+
     .second-footer{
         display: flex;
         @include flex;
@@ -492,7 +498,6 @@ footer{
                 font-size: .700rem;
                 font-style: italic;
             }
-            
         }
 
         div{
@@ -510,22 +515,51 @@ footer{
 @include mobile-view{
     footer{
         flex-direction: column;
-        padding: 3rem 2rem;
+        padding: 3rem 1.8rem;
+        position: relative;
 
         .first-footer{
+            order: 2;
+            flex-direction: column-reverse;
+            margin: 0 auto;
 
+            .logo-footer{
+                margin: 2.5rem auto 0 auto;
+            }
+
+            .icon-footer{
+                margin: 2rem auto 0 auto;
+
+                .fa-brands{
+                    margin-right: 1.5rem;
+                }
+            }
         }
 
-        .second-footer{
-
-        }
-
-        .third-footer{
-
+        .center{
+            gap: 20px 0;
+            order: 1;
         }
 
         .fourth-footer{
+            order: 0;
+
+            .form{
+                margin: 0 auto 3rem auto;
+            }
             
+            div{
+                text-align: center;
+
+                .copyright{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0 auto;
+                    width: 100%;
+                }
+            }
         }
     }
 }
