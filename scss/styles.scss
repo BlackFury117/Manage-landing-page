@@ -509,7 +509,23 @@ footer{
 
 @include mobile-view{
     footer{
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 3rem 2rem;
+
+        .first-footer{
+
+        }
+
+        .second-footer{
+
+        }
+
+        .third-footer{
+
+        }
+
+        .fourth-footer{
+            
+        }
     }
 }
