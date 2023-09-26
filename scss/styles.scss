@@ -378,7 +378,11 @@ main{
         }
 
         .third-section{
-            padding: 4rem 2rem;
+            background: url(/images/bg-simplify-section-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-color: $orange-color;
+            padding: 5rem 2rem;
 
             .third-container{
                 flex-direction: column;
